@@ -41,64 +41,47 @@ const Services = () => {
   const instantProducts = [
     {
       name: "Website FAQ Chatbot",
-      summary: "A ready-to-use AI chatbot that instantly answers your customers' common questions, boosting engagement and reducing support time.",
+      summary: "Turn your business website into a 24/7 customer support machine. Our AI bot scans your website and FAQ (if provided) to answer customer questions instantly, capture leads, and route tough queries to your team.",
       price: "$249",
       icon: MessageSquare,
-      features: ["24/7 customer support", "Easy website integration", "Customizable responses", "Analytics dashboard"]
+      features: ["24/7 customer support", "Website auto-scan technology", "FAQ integration", "Lead capture & routing"],
+      requirements: ["Website URL (required for scan)", "FAQ/Docs (optional upload)", "Brand details (logo, colors)", "Contact email for delivery"]
     },
     {
-      name: "Lead Capture Bot",
-      summary: "Never lose a lead again — this bot greets every visitor and collects qualified leads directly into your CRM.",
-      price: "$199",
-      icon: Users,
-      features: ["Automated lead qualification", "CRM integration", "Custom greeting messages", "Lead scoring"]
-    },
-    {
-      name: "Zapier CRM Kit",
-      summary: "Automate lead entry into your CRM. Includes installable workflows with simple setup guides. No coding required.",
-      price: "$79",
-      icon: Zap,
-      features: ["Pre-built workflows", "Setup documentation", "Multi-platform support", "No coding required"]
-    },
-    {
-      name: "Marketing Prompt Pack",
-      summary: "Instantly usable AI prompt templates for social posts, email campaigns, and blog content — just fill in your brand details and go.",
+      name: "Marketing Prompt Pack", 
+      summary: "Unlock AI-powered marketing fast: custom content prompt packs for your business. Scan your website & social channels to instantly generate pre-filled prompts for blogs, social posts, ads, and email campaigns.",
       price: "$49",
       icon: Download,
-      features: ["50+ proven prompts", "Industry-specific templates", "Brand customization guide", "Instant download"]
+      features: ["Website & social scan", "Pre-filled prompt templates", "Multi-channel content", "Instant download"],
+      requirements: ["Website URL", "Primary social media handles", "Business category/industry", "Optional campaign goals"]
     }
   ];
 
   const consultativeServices = [
     {
-      name: "Custom AI Agent Development",
-      summary: "We build advanced AI chatbots and agents to automate your business, integrate with your systems, and deliver real results. Get a free strategy call.",
+      name: "Fully Custom AI Chatbots",
+      summary: "For complex workflows or unique data sources, our experts consult and build, quoting case-by-case.",
       cta: "Book a Consultation"
     },
     {
-      name: "Bespoke Zapier Workflows",
-      summary: "Automate multi-step, cross-platform business tasks—custom-designed automations built for your exact needs. Consultation required.",
-      cta: "Request a Custom Quote"
-    },
-    {
-      name: "Prompt System Design",
-      summary: "Frameworks and templates engineered for your marketing, sales, or support teams. We'll equip your team to leverage AI safely and efficiently.",
-      cta: "Start a Project"
+      name: "Bespoke Marketing Automation & Advanced Prompts",
+      summary: "Includes deep-dive industry research and hands-on implementation.",
+      cta: "Request a Strategy Session"
     }
   ];
 
   const faqItems = [
     {
-      q: "How fast will I receive my automation?",
-      a: "Instantly for plug-and-play products! For custom projects, we'll provide a timeline after our discovery call."
+      q: "How fast will my chatbot or prompt pack be delivered?",
+      a: "Instant for most instant-buy products! Custom services take a couple days, depending on project needs."
     },
     {
-      q: "Can you connect to my existing tools?",
-      a: "Yes! We specialize in integrating with CRMs, email, chat, and marketing platforms."
+      q: "Can your bot handle complex business logic or integrate with my CRM?",
+      a: "Basic bots are designed for common FAQs and lead capture. For advanced integrations, please book a consultation."
     },
     {
-      q: "Is support included?",
-      a: "All instant products include email support and documentation. Custom projects come with tailored support options."
+      q: "What if my FAQ or information changes?",
+      a: "You can request an update or subscribe to our ongoing bot maintenance for automatic refreshes."
     }
   ];
 
@@ -131,13 +114,19 @@ const Services = () => {
               <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
                 Plug-and-Play AI Automation Tools — Buy Now
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-body">
-                Get powerful automation and AI tools live on your website within minutes. 
-                Purchase, install, and start benefitting instantly — no tech expertise required.
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-body mb-8">
+                Just buy, submit your website & info, and launch your AI bot today.
               </p>
+              
+              {/* Callout Banner */}
+              <div className="bg-accent/10 rounded-lg p-4 max-w-4xl mx-auto">
+                <p className="text-accent font-body font-medium">
+                  ⚡ Marketing tasks taking too long? Try our plug-and-play prompt packs for instant results.
+                </p>
+              </div>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {instantProducts.map((product, index) => {
                 const IconComponent = product.icon;
                 return (
@@ -194,10 +183,17 @@ const Services = () => {
               <h2 className="text-3xl sm:text-4xl font-heading font-bold text-foreground mb-4">
                 Custom AI Automations & Consulting
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-body">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto font-body mb-8">
                 Need something tailor-made? Our experts will consult, build, and deploy bespoke 
                 automation and AI solutions for your unique business challenges.
               </p>
+              
+              {/* Callout Banner */}
+              <div className="bg-accent/10 rounded-lg p-4 max-w-4xl mx-auto">
+                <p className="text-accent font-body font-medium">
+                  📞 Need something custom? Book a free call for a tailored solution.
+                </p>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
